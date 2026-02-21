@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Friends Blood Donation Service</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="header">
+  <h1>🩸 Friends Blood Donation Service</h1>
+  <button class="admin-btn" onclick="go('adminLogin')">Admin</button>
+</header>
+
+<!-- WELCOME -->
+<section class="step active" id="welcome">
+  <button onclick="go('login')">Login</button>
+  <button onclick="go('signupChoice')">Sign Up</button>
+</section>
+
+<!-- SIGNUP CHOICE -->
+<section class="step" id="signupChoice">
+  <div class="card" onclick="go('donorSignup')">Donor</div>
+  <div class="card" onclick="go('bankSignup')">Blood Bank</div>
+  <button onclick="go('welcome')">Back</button>
+</section>
+
+<!-- DONOR SIGNUP -->
+<section class="step" id="donorSignup">
+  <h2>Donor Registration</h2>
+
+  <input id="d_name" placeholder="Full Name">
+
+  <select id="d_group">
+    <option value="">Blood Group</option>
+    <option>A+</option><option>A-</option>
+    <option>B+</option><option>B-</option>
+    <option>AB+</option><option>AB-</option>
+    <option>O+</option><option>O-</option>
+  </select>
+
+  <input id="d_phone" placeholder="Phone">
+
+  <select id="d_district">
+    <option value="">District</option>
+    <option>Dhaka</option><option>Chattogram</option>
+    <option>Rajshahi</option><option>Khulna</option>
+    <option>Barishal</option><option>Sylhet</option>
+    <option>Rangpur</option><option>Mymensingh</option>
+  </select>
+
+  <input id="d_date" type="date">
+  <input id="d_username" placeholder="Username">
+  <input id="d_password" type="password" placeholder="Password">
+
+  <button onclick="signupDonor()">Sign Up</button>
+  <button onclick="go('signupChoice')">Back</button>
+</section>
+
+<!-- BLOOD BANK SIGNUP -->
+<section class="step" id="bankSignup">
+  <h2>Blood Bank Registration</h2>
+
+  <input id="b_name" placeholder="Blood Bank Name">
+  <input id="b_phone" placeholder="Phone">
+
+  <select id="b_district">
+    <option value="">District</option>
+    <option>Dhaka</option><option>Chattogram</option>
+    <option>Rajshahi</option><option>Khulna</option>
+    <option>Barishal</option><option>Sylhet</option>
+    <option>Rangpur</option><option>Mymensingh</option>
+  </select>
+
+  <input id="b_username" placeholder="Username">
+  <input id="b_password" type="password" placeholder="Password">
+
+  <input id="Apos" placeholder="A+">
+  <input id="Aneg" placeholder="A-">
+  <input id="Bpos" placeholder="B+">
+  <input id="Bneg" placeholder="B-">
+  <input id="ABpos" placeholder="AB+">
+  <input id="ABneg" placeholder="AB-">
+  <input id="Opos" placeholder="O+">
+  <input id="Oneg" placeholder="O-">
+
+  <button onclick="signupBank()">Sign Up</button>
+  <button onclick="go('signupChoice')">Back</button>
+</section>
+
+<!-- LOGIN -->
+<section class="step" id="login">
+  <h2>Login</h2>
+  <input id="l_username" placeholder="Username">
+  <input id="l_password" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+  <button onclick="go('welcome')">Back</button>
+</section>
+
+<!-- DONOR DASHBOARD -->
+<section class="step" id="dashboard">
+  <h2>Donor Dashboard</h2>
+  <button onclick="go('search')">Search</button>
+  <button onclick="go('profile')">Update Profile</button>
+  <button onclick="logout()">Logout</button>
+</section>
+
+<!-- PROFILE -->
+<section class="step" id="profile">
+  <h2>Update Profile</h2>
+  <input id="p_phone" placeholder="Phone">
+  <select id="p_district">
+    <option>Dhaka</option><option>Chattogram</option>
+    <option>Rajshahi</option><option>Khulna</option>
+    <option>Barishal</option><option>Sylhet</option>
+    <option>Rangpur</option><option>Mymensingh</option>
+        <option>Rangpur</option><option>Potuakhali</option>
+
+  </select>
+  <input id="p_date" type="date">
+  <button onclick="updateProfile()">Update</button>
+  <button onclick="go('dashboard')">Back</button>
+</section>
+
+<!-- BANK DASHBOARD -->
+<section class="step" id="bankDashboard">
+  <h2>Blood Bank Dashboard</h2>
+  <button onclick="go('bankProfile')">Update Stock</button>
+  <button onclick="logout()">Logout</button>
+</section>
+
+<!-- BANK PROFILE -->
+<section class="step" id="bankProfile">
+  <h2>Update Blood Stock</h2>
+  <input id="bp_phone" placeholder="Phone">
+  <input id="bp_Ap"><input id="bp_An">
+  <input id="bp_Bp"><input id="bp_Bn">
+  <input id="bp_ABp"><input id="bp_ABn">
+  <input id="bp_Op"><input id="bp_On">
+  <button onclick="updateBank()">Update</button>
+  <button onclick="go('bankDashboard')">Back</button>
+</section>
+
+<!-- SEARCH -->
+<section class="step" id="search">
+  <h2>Search Blood</h2>
+
+  <select id="searchType">
+    <option value="donor">Donor</option>
+    <option value="bank">Blood Bank</option>
+  </select>
+
+  <select id="s_group">
+    <option value="">Blood Group</option>
+    <option>A+</option><option>A-</option>
+    <option>B+</option><option>B-</option>
+    <option>AB+</option><option>AB-</option>
+    <option>O+</option><option>O-</option>
+    <option>O+</option><option>ABO</option>
+  </select>
+
+  <select id="s_district">
+    <option value="">District</option>
+    <option>Dhaka</option><option>Chattogram</option>
+    <option>Rajshahi</option><option>Khulna</option>
+    <option>Barishal</option><option>Sylhet</option>
+    <option>Rangpur</option><option>Mymensingh</option>
+  </select>
+
+  <button onclick="search()">Search</button>
+  <button onclick="go('dashboard')">Back</button>
+
+  <pre id="result"></pre>
+</section>
+
+<!-- ADMIN -->
+<section class="step" id="adminLogin">
+  <h2>Admin Login</h2>
+  <input id="au" placeholder="Username">
+  <input id="ap" type="password" placeholder="Password">
+  <button onclick="adminLogin()">Login</button>
+</section>
+
+<section class="step" id="adminPanel">
+  <h2>Admin Panel</h2>
+  <button onclick="loadDonors()">Donors</button>
+  <button onclick="loadBanks()">Blood Banks</button>
+  <button onclick="go('welcome')">Logout</button>
+  <pre id="adminData"></pre>
+</section>
+
+<script>
+let currentUser="";
+
+function go(id){
+  document.querySelectorAll(".step").forEach(s=>s.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+}
+
+function signupDonor(){
+  fetch("/signup/donor",{method:"POST",headers:{"Content-Type":"application/json"},
+  body:JSON.stringify({
+    name:d_name.value,
+    username:d_username.value,
+    password:d_password.value,
+    blood_group:d_group.value,
+    phone:d_phone.value,
+    district:d_district.value,
+    date:d_date.value
+  })}).then(()=>go("login"));
+}
+
+function signupBank(){
+  fetch("/signup/bank",{method:"POST",headers:{"Content-Type":"application/json"},
+  body:JSON.stringify({
+    name:b_name.value,
+    username:b_username.value,
+    password:b_password.value,
+    phone:b_phone.value,
+    district:b_district.value,
+    Apos:Apos.value,Aneg:Aneg.value,
+    Bpos:Bpos.value,Bneg:Bneg.value,
+    ABpos:ABpos.value,ABneg:ABneg.value,
+    Opos:Opos.value,Oneg:Oneg.value
+  })}).then(()=>go("login"));
+}
+
+function login(){
+  fetch("/login",{method:"POST",headers:{"Content-Type":"application/json"},
+  body:JSON.stringify({username:l_username.value,password:l_password.value})})
+  .then(r=>r.json()).then(d=>{
+    if(d.role==="donor"){currentUser=l_username.value;go("dashboard");}
+    else if(d.role==="bank"){currentUser=l_username.value;go("bankDashboard");}
+    else if(d.role==="admin"){go("adminPanel");}
+    else alert("Invalid login");
+  });
+}
+
+function updateProfile(){
+  fetch("/update/donor",{method:"POST",headers:{"Content-Type":"application/json"},
+  body:JSON.stringify({
+    username:currentUser,
+    phone:p_phone.value,
+    district:p_district.value,
+    date:p_date.value
+  })}).then(()=>go("dashboard"));
+}
+
+function updateBank(){
+  fetch("/update/bank",{method:"POST",headers:{"Content-Type":"application/json"},
+  body:JSON.stringify({
+    username:currentUser,
+    phone:bp_phone.value,
+    Apos:bp_Ap.value,Aneg:bp_An.value,
+    Bpos:bp_Bp.value,Bneg:bp_Bn.value,
+    ABpos:bp_ABp.value,ABneg:bp_ABn.value,
+    Opos:bp_Op.value,Oneg:bp_On.value
+  })}).then(()=>go("bankDashboard"));
+}
+
+function search(){
+  fetch("/search",{method:"POST",headers:{"Content-Type":"application/json"},
+  body:JSON.stringify({
+    type:searchType.value,
+    blood_group:s_group.value,
+    district:s_district.value
+  })}).then(r=>r.json())
+    .then(d=>result.textContent=JSON.stringify(d,null,2));
+}
+
+function adminLogin(){
+  l_username.value=au.value;
+  l_password.value=ap.value;
+  login();
+}
+
+
+function loadDonors(){
+  fetch("/admin/donors")
+    .then(res => res.json())
+    .then(data => {
+      let html = `
+        <table class="admin-table">
+          <tr>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Blood Group</th>
+            <th>Phone</th>
+            <th>District</th>
+          </tr>
+      `;
+
+      data.forEach(d => {
+        html += `
+          <tr>
+            <td>${d[0]}</td>
+            <td>${d[1]}</td>
+            <td>${d[2]}</td>
+            <td>${d[3]}</td>
+            <td>${d[4]}</td>
+          </tr>
+        `;
+      });
+
+      html += "</table>";
+      document.getElementById("adminData").innerHTML = html;
+    });
+}
+
+function loadBanks(){
+  fetch("/admin/banks")
+    .then(res => res.json())
+    .then(data => {
+      let html = `
+        <table class="admin-table">
+          <tr>
+            <th>Bank Name</th>
+            <th>Username</th>
+            <th>Phone</th>
+            <th>District</th>
+          </tr>
+      `;
+
+      data.forEach(b => {
+        html += `
+          <tr>
+            <td>${b[0]}</td>
+            <td>${b[1]}</td>
+            <td>${b[2]}</td>
+            <td>${b[3]}</td>
+          </tr>
+        `;
+      });
+
+      html += "</table>";
+      document.getElementById("adminData").innerHTML = html;
+    });
+}
+
+
+
+function logout(){
+  currentUser="";
+  go("welcome");
+}
+</script>
+
+</body>
+</html>

@@ -1,5 +1,5 @@
 -- Create Blood Donors Table
-CREATE TABLE IF NOT EXISTS donors (
+CREATE TABLE IF NOT EXISTS banks (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
     username TEXT UNIQUE NOT NULL,

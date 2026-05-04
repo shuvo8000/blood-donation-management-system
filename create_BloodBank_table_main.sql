@@ -1,12 +1,13 @@
--- Create Blood Donors Table
-CREATE TABLE IF NOT EXISTS donors (
+-- =========================
+-- 2. CREATE BLOOD BANKS TABLE
+-- =========================
+CREATE TABLE IF NOT EXISTS banks (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
     username TEXT UNIQUE NOT NULL,
     password TEXT NOT NULL,
     phone TEXT NOT NULL,
     district TEXT NOT NULL,
-
     Apos INTEGER DEFAULT 0,
     Aneg INTEGER DEFAULT 0,
     Bpos INTEGER DEFAULT 0,

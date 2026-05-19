@@ -1,0 +1,13 @@
+ Admin: View All Donors
+SELECT name, username, blood_group, phone, district
+FROM donors;
+
+-- Admin: View All Blood Banks
+SELECT name, username, phone, district
+FROM banks;
+
+-- =========================
+-- 7. CHECK ALL DATA
+-- =========================
+SELECT * FROM donors;
+SELECT * FROM banks;

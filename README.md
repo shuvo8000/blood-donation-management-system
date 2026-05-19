@@ -1,4 +1,4 @@
-#🩸 Blood Donation Management System
+#🩸 Friends Blood Donation Service
 
 A web-based Blood Donation Management System developed for university project purposes. This project helps connect blood donors, recipients, and hospitals through an easy-to-use online platform.
 

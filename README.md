@@ -1,4 +1,4 @@
-# Blood Donation Management System
+#🩸 Blood Donation Management System
 
 A web-based Blood Donation Management System developed for university project purposes. This project helps connect blood donors, recipients, and hospitals through an easy-to-use online platform.
 
@@ -109,10 +109,6 @@ This project is created for educational and university project purposes.
 ---
 
 # GitHub Repository
-
-Upload this project to GitHub and replace the repository link with your own repository URL.
-
-Example:
 
 ```bash
 [https://github.com/your-username/Blood-Donation-Management-System](https://github.com/shuvo8000/blood-donation-management-system/invitations)

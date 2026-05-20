@@ -176,6 +176,7 @@ Through this project, the following concepts were practiced:
 
 
 ---
+
 # 🗄️ ER Diagram
 
 The following ER Diagram represents the database structure and relationships between donors, hospitals, recipients, and blood records in the Blood Donation Management System.
@@ -183,6 +184,7 @@ The following ER Diagram represents the database structure and relationships bet
 <p align="center">
   <img src="ER Diagram.png" width="800">
 </p>
+---
 
 # 🗃️ Database Schema Diagram
 
@@ -193,13 +195,18 @@ The following diagram represents the database schema of the Friends Blood Donati
 </p>
 
 ---
-# License
+# 🔐 Security Note
+
+This project is developed for educational and university project purposes. Basic authentication functionality has been implemented for login and registration features. However, advanced security features such as password encryption, secure session management, and role-based authentication can be added in future versions to improve system security and reliability.
+
+---
+# 📄 License
 
 This project is created for educational and university project purposes.
 
 ---
 
-# GitHub Repository
+# 🌐 GitHub Repository
 
 ```bash
  https://github.com/shuvo8000/blood-donation-management-system

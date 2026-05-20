@@ -151,14 +151,14 @@ The `banks` table stores all blood bank information including:
 ---
 
 # 🚀 Future Improvements
-*Secure User Authentication
-*Password Encryption
-*SMS/Email Notifications
-*Blood Request Approval System
-*Mobile Application Version
-*Live Location Tracking
-*Online Blood Request System
-*Dashboard Analytics
+* Secure User Authentication
+* Password Encryption
+* SMS/Email Notifications
+* Blood Request Approval System
+* Mobile Application Version
+* Live Location Tracking
+* Online Blood Request System
+* Dashboard Analytics
 
 ---
 

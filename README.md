@@ -70,6 +70,7 @@ Blood-Donation-Management-System/
 ├── Schema Diagram.png
 └── README.md
 ```
+---
 
 # 🎯 Objectives
 
@@ -78,7 +79,6 @@ Blood-Donation-Management-System/
 * Help hospitals and patients during emergencies.
 * Create a simple and efficient blood donation platform.
 
----
 ---
 
 # 🔍 Main Functionalities

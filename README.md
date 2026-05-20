@@ -101,7 +101,17 @@ Through this project, the following concepts were practiced:
 
 
 ---
+# ER Diagram
 
+The following ER Diagram represents the database structure and relationships between donors, hospitals, recipients, and blood records in the Blood Donation Management System.
+
+<p align="center">
+  <img src="ER Diagram.png" width="800">
+</p>
+
+---
+
+# Objectives
 # License
 
 This project is created for educational and university project purposes.

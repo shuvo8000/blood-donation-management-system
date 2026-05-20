@@ -4,7 +4,7 @@ A web-based Blood Donation Management System developed for university project pu
 
 ---
 
-#📖Project Overview
+# 📖 Project Overview
 
 The Blood Donation Management System is designed to manage blood donation activities digitally. Users can search for blood donors by blood group and district, register as donors, and manage donation records efficiently.
 
@@ -29,7 +29,7 @@ This project aims to reduce the time needed to find emergency blood donors and i
 
 ---
 
-#🛠️Technologies Used
+# 🛠️ Technologies Used
 
 ## Frontend
 
@@ -47,7 +47,7 @@ This project aims to reduce the time needed to find emergency blood donors and i
 
 ---
 
-#📂Project Structure
+# 📂 Project Structure
 
 ```bash
 Blood-Donation-Management-System/
@@ -71,7 +71,7 @@ Blood-Donation-Management-System/
 └── README.md
 ```
 
-#🎯 Objectives
+# 🎯 Objectives
 
 * Make blood searching faster and easier.
 * Digitize donor management.
@@ -150,7 +150,7 @@ The `banks` table stores all blood bank information including:
 
 ---
 
-#🚀 Future Improvements
+# 🚀 Future Improvements
 *Secure User Authentication
 *Password Encryption
 *SMS/Email Notifications
@@ -162,7 +162,7 @@ The `banks` table stores all blood bank information including:
 
 ---
 
-#📚 Learning Outcomes
+# 📚 Learning Outcomes
 
 Through this project, the following concepts were practiced:
 
@@ -176,7 +176,7 @@ Through this project, the following concepts were practiced:
 
 
 ---
-#🗄️ER Diagram
+# 🗄️ ER Diagram
 
 The following ER Diagram represents the database structure and relationships between donors, hospitals, recipients, and blood records in the Blood Donation Management System.
 
@@ -184,7 +184,7 @@ The following ER Diagram represents the database structure and relationships bet
   <img src="ER Diagram.png" width="800">
 </p>
 
-#🗃️Database Schema Diagram
+# 🗃️ Database Schema Diagram
 
 The following diagram represents the database schema of the Friends Blood Donation Service project.
 

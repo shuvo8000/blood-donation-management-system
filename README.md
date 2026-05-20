@@ -119,5 +119,5 @@ This project is created for educational and university project purposes.
 # GitHub Repository
 
 ```bash
-[https://github.com/your-username/Blood-Donation-Management-System](https://github.com/shuvo8000/blood-donation-management-system/invitations)
+ https://github.com/shuvo8000/blood-donation-management-system
 ```

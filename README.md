@@ -64,6 +64,8 @@ Blood-Donation-Management-System/
 ├── app.py
 ├── database.sql
 ├── requirements.txt
+├── ER Diagram.png
+├── Schema Diagram.png
 └── README.md
 ```
 
@@ -73,6 +75,76 @@ Blood-Donation-Management-System/
 * Digitize donor management.
 * Help hospitals and patients during emergencies.
 * Create a simple and efficient blood donation platform.
+
+---
+---
+
+# 🔍 Main Functionalities
+
+## 🩸 Donor Registration
+
+Users can register themselves as blood donors by providing personal information, blood group, district, phone number, and last donation date. The system stores donor information securely in the database.
+
+---
+
+## 🏥 Blood Bank Registration
+
+Blood banks can create accounts and manage available blood stock quantities for different blood groups such as A+, B+, O+, AB+, etc.
+
+---
+
+## 🔎 Search System
+
+Users can search for blood donors and blood banks based on blood group and district. The system provides fast and real-time search results.
+
+---
+
+## 👨‍💼 Admin Panel
+
+The admin panel allows administrators to view all registered donors and blood banks and monitor the overall system data.
+
+---
+
+## ✏️ Profile Update
+
+Both donors and blood banks can update their personal information, contact number, district, and blood stock information when needed.
+
+---
+
+# 🧪 Database Tables
+
+## 👤 Donors Table
+
+The `donors` table stores all registered donor information including:
+
+* Name
+* Username
+* Password
+* Blood Group
+* Phone Number
+* District
+* Last Donation Date
+
+---
+
+## 🏦 Banks Table
+
+The `banks` table stores all blood bank information including:
+
+* Blood Bank Name
+* Username
+* Password
+* Phone Number
+* District
+* Blood Stock Quantities
+  * A+
+  * A-
+  * B+
+  * B-
+  * AB+
+  * AB-
+  * O+
+  * O-
 
 ---
 

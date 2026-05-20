@@ -110,8 +110,6 @@ The following ER Diagram represents the database structure and relationships bet
 </p>
 
 ---
-
-# Objectives
 # License
 
 This project is created for educational and university project purposes.

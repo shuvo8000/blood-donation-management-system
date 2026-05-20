@@ -109,6 +109,14 @@ The following ER Diagram represents the database structure and relationships bet
   <img src="ER Diagram.png" width="800">
 </p>
 
+# Database Schema Diagram
+
+The following diagram represents the database schema of the Friends Blood Donation Service project.
+
+<p align="center">
+  <img src="Schma Diagram.png" width="1000">
+</p>
+
 ---
 # License
 

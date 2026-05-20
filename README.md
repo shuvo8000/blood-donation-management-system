@@ -184,6 +184,7 @@ The following ER Diagram represents the database structure and relationships bet
 <p align="center">
   <img src="ER Diagram.png" width="800">
 </p>
+
 ---
 
 # 🗃️ Database Schema Diagram
